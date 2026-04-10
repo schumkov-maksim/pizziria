@@ -6,4 +6,5 @@ export default defineNuxtConfig({
     baseURL: "/pizziria/",
   },
   modules: ["@nuxt/image", "@pinia/nuxt", "@nuxtjs/tailwindcss", "nuxt-swiper"],
+  css: ["~/assets/scss/main.scss"],
 });
