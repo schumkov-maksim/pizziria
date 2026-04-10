@@ -9,7 +9,8 @@ export interface CartItem {
 
 export const useCartStore = defineStore('cart', {
   state: () => ({
-    items: [] as CartItem[],
+    items:  [] as CartItem[],
+    isOpen: false,
   }),
   getters: {
     totalCount: (state) =>
@@ -18,12 +19,12 @@ export const useCartStore = defineStore('cart', {
       state.items.reduce((sum, item) => sum + item.price * item.quantity, 0),
   },
   actions: {
-    addItem(item: Omit<CartItem, 'quantity'>) {
+    addItem(item: Omit<CartItem, 'quantity'>, qty = 1) {
       const existing = this.items.find((i) => i.id === item.id)
       if (existing) {
-        existing.quantity++
+        existing.quantity += qty
       } else {
-        this.items.push({ ...item, quantity: 1 })
+        this.items.push({ ...item, quantity: qty })
       }
     },
     removeItem(id: number) {
@@ -32,5 +33,8 @@ export const useCartStore = defineStore('cart', {
     clearCart() {
       this.items = []
     },
+    openCart()  { this.isOpen = true  },
+    closeCart() { this.isOpen = false },
+    toggleCart() { this.isOpen = !this.isOpen },
   },
 })

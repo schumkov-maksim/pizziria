@@ -43,7 +43,7 @@ onUnmounted(() => window.removeEventListener('scroll', onScroll))
       <!-- Actions -->
       <div class="flex items-center gap-3">
         <!-- Cart button -->
-        <button class="cart-btn" aria-label="Warenkorb öffnen">
+        <button class="cart-btn" aria-label="Warenkorb öffnen" @click="cart.toggleCart()">
           <span class="cart-btn__icon">🛒</span>
           <span class="cart-btn__label">Warenkorb</span>
           <span v-if="cart.totalCount > 0" class="cart-count">{{ cart.totalCount }}</span>
