@@ -1,8 +1,9 @@
 <script setup lang="ts">
 useSeoMeta({
-  title: 'Über uns – La Bella Pizza',
-  description: 'Leidenschaft, Handwerk und echter Geschmack seit 1998. Erfahren Sie mehr über die Geschichte von La Bella Pizza.',
-})
+  title: "Über uns – La Bella Pizza",
+  description:
+    "Leidenschaft, Handwerk und echter Geschmack seit 1998. Erfahren Sie mehr über die Geschichte von La Bella Pizza.",
+});
 </script>
 
 <template>
@@ -10,7 +11,6 @@ useSeoMeta({
     <AboutHero />
     <AboutStory />
     <AboutMilestones />
-    <AboutStats />
     <AboutValues />
     <AboutTeam />
     <AboutCta />
