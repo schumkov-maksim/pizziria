@@ -6,6 +6,9 @@ useSeoMeta({
 
 <template>
   <div>
+    DOk
+    <ContentDoc />
+
     <HeroSlider />
     <StatsBar />
     <DealsSection />

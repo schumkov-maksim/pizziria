@@ -1,0 +1,3 @@
+# Nuxt Markdown
+
+Works correctly.
