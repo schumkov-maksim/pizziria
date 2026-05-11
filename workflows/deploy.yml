@@ -36,7 +36,7 @@ jobs:
       - name: Generate static site
         run: npx nuxi generate
         env:
-          NUXT_PUBLIC_HELLO: ${{ vars.NUXT_PUBLIC_HELLO }}
+          NUXT_PUBLIC_HELLO: "TESt"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
